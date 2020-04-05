@@ -95,12 +95,14 @@ class BarcodeMask extends React.Component {
     this.animation = Animated.loop(
       Animated.sequence([
         Animated.timing(this.state.top, {
-          toValue: this.state.maskCenterViewHeight - 10,
+          toValue: 290,
           duration: this.props.lineAnimationDuration,
+          useNativeDriver: true
         }),
         Animated.timing(this.state.top, {
           toValue: 10,
           duration: this.props.lineAnimationDuration,
+          useNativeDriver: true
         })
       ])
     );
